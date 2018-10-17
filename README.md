@@ -12,7 +12,7 @@ This tool allows you to change which users or groups are visible to one or all u
 ## Feedback
 
 * Send us an email at support@amtangee.com
-* File an issue here in [GitHub](https://github.com/amtangee/tools.AMTANGEE.Tools.UsersDoNotShow/issues)
+* File an issue here in [GitHub](https://github.com/amtangee/tools.UsersDoNotShow/issues)
 
 ## License
 

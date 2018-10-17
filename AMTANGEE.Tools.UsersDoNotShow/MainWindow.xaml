@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AMTANGEE.Tools.UsersDoNotShow"
         mc:Ignorable="d"
-        Title="AMTANGEE.Tools.UsersDoNotShow" Height="350" MinHeight="250" Width="300" MinWidth="287" MaxWidth="600">
+        Title="UsersDoNotShow" Height="350" MinHeight="250" Width="300" MinWidth="287" MaxWidth="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
