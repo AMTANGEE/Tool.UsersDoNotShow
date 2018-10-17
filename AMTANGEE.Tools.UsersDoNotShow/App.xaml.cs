@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace UsersDoNotShow
+namespace AMTANGEE.Tools.UsersDoNotShow
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -41,7 +41,7 @@ namespace UsersDoNotShow
                         path = System.IO.Path.Combine(reg.GetValue("Path").ToString(), assemblyName);
             }
 
-            System.IO.File.AppendAllText("UsersDoNotShow.log", "Resolved Assemlby path: '" + path + "'");
+            System.IO.File.AppendAllText("AMTANGEE.Tools.UsersDoNotShow.log", "Resolved Assemlby path: '" + path + "'");
 
             if (System.IO.File.Exists(path) && !path.StartsWith("\\"))
                 return System.Reflection.Assembly.LoadFile(path);

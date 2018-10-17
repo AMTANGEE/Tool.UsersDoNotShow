@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace UsersDoNotShow
+namespace AMTANGEE.Tools.UsersDoNotShow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -74,7 +74,7 @@ namespace UsersDoNotShow
 
             var user = (AMTANGEE.SDK.Users.User)CbUser.SelectedItem;
             
-            var ds = AMTANGEE.DB.Select("select USERGROUP from UsersDoNotShow where [USER] = '" + user.Guid + "' and LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "'");
+            var ds = AMTANGEE.DB.Select("select USERGROUP from AMTANGEE.Tools.UsersDoNotShow where [USER] = '" + user.Guid + "' and LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "'");
 
             if (ds != null)
                 foreach (System.Data.DataRow row in ds.Tables[0].Rows)
@@ -107,7 +107,7 @@ namespace UsersDoNotShow
                 foreach (var cur in usersNotToShow)
                     HideUser(user.Guid, cur);
 
-                AMTANGEE.SDK.Events.SendSDKEvent("REFRESHUSERSDONOTSHOW:{" + user.Guid.ToString().ToUpper() + "}");
+                AMTANGEE.SDK.Events.SendSDKEvent("REFRESHAMTANGEE.Tools.UsersDoNotShow:{" + user.Guid.ToString().ToUpper() + "}");
             }
         }
 
@@ -126,12 +126,12 @@ namespace UsersDoNotShow
             foreach (var cur in usersNotToShow)
                 HideUser(user.Guid, cur);
             
-            AMTANGEE.SDK.Events.SendSDKEvent("REFRESHUSERSDONOTSHOW:{" + user.Guid.ToString().ToUpper() + "}");
+            AMTANGEE.SDK.Events.SendSDKEvent("REFRESHAMTANGEE.Tools.UsersDoNotShow:{" + user.Guid.ToString().ToUpper() + "}");
         }
 
         public void HideUser(Guid userGuid, Guid userNotToShow)
         {
-            AMTANGEE.DB.Exec("insert into UsersDoNotShow ([USER],USERGROUP,LOCATION) " +
+            AMTANGEE.DB.Exec("insert into AMTANGEE.Tools.UsersDoNotShow ([USER],USERGROUP,LOCATION) " +
                 "values ('" + userGuid + "','" + userNotToShow + "','" + AMTANGEE.SDK.Global.OwnLocation.Guid + "')");
         }
 
@@ -139,16 +139,16 @@ namespace UsersDoNotShow
         {
             if(userGuid == new Guid())
             {
-                AMTANGEE.DB.Exec("delete from UsersDoNotShow where LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "'");
+                AMTANGEE.DB.Exec("delete from AMTANGEE.Tools.UsersDoNotShow where LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "'");
                 if(sendSdkEvent)
                     foreach (var user in new AMTANGEE.SDK.Users.Users())
-                        AMTANGEE.SDK.Events.SendSDKEvent("REFRESHUSERSDONOTSHOW:{" + user.Guid.ToString().ToUpper() + "}");
+                        AMTANGEE.SDK.Events.SendSDKEvent("REFRESHAMTANGEE.Tools.UsersDoNotShow:{" + user.Guid.ToString().ToUpper() + "}");
             }
             else
             {
-                AMTANGEE.DB.Exec("delete from UsersDoNotShow where LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "' and [USER] = '" + userGuid + "'");
+                AMTANGEE.DB.Exec("delete from AMTANGEE.Tools.UsersDoNotShow where LOCATION = '" + AMTANGEE.SDK.Global.OwnLocation.Guid + "' and [USER] = '" + userGuid + "'");
                 if(sendSdkEvent)
-                    AMTANGEE.SDK.Events.SendSDKEvent("REFRESHUSERSDONOTSHOW:{" + userGuid.ToString().ToUpper() + "}");
+                    AMTANGEE.SDK.Events.SendSDKEvent("REFRESHAMTANGEE.Tools.UsersDoNotShow:{" + userGuid.ToString().ToUpper() + "}");
             }
         }
     }

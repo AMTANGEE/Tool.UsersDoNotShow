@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E7DD0086-2175-45DF-B05D-0EDC3470DE58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UsersDoNotShow</RootNamespace>
+    <RootNamespace>AMTANGEE.Tools.UsersDoNotShow</RootNamespace>
     <AssemblyName>UsersDoNotShow</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
