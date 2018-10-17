@@ -7,12 +7,12 @@ This tool allows you to change which users or groups are visible to one or all u
 * AMTANGEE Partner Key for signing the assembly
 * .NET Framework 4.0
 
-**Note:** An existing AMTANGEE Installation is not needed but the AMTANGEE SDK and the provided AMTANGEE.Custom.dll are required.
+**Note:** An existing AMTANGEE Installation is not needed BUT the AMTANGEE SDK and the provided AMTANGEE.Custom.dll are required.
 
 ## Feedback
 
 * Send us an email at support@amtangee.com
-* File an issue here in [GitHub](https://github.com/amtangee/tool.usersdonotshow/issues)
+* File an issue here in [GitHub](https://github.com/amtangee/tools.usersdonotshow/issues)
 
 ## License
 
