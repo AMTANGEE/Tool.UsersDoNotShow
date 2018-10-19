@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UsersDoNotShow
+namespace AMTANGEE.Tools.UsersDoNotShow
 {
     public class UserGroupObject
     {

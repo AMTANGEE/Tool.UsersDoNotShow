@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace UsersDoNotShow
+namespace AMTANGEE.Tools.UsersDoNotShow
 {
     /// <summary>
     /// Interaction logic for App.xaml
